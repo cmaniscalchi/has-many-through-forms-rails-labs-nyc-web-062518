@@ -1,0 +1,12 @@
+<div class=post-content>
+  Title: <%= @post.title %><br>
+  Content: <%= @post.content %><br>
+  Category: <% @post.categories.each do |category| %>
+    <%= category.name %><br>
+  <% end %>
+  Comments:<br>
+  <% @post.comments.each do |comment| %>
+    "<%= comment.content %>"<br>
+    User: <%= comment.user.username %><br>
+  <% end %>
+</div>
